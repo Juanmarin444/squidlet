@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#wrapper {
+    width: 970px;
+    margin: 0px auto;
+    background: #ffffff;
+    text-align: center;
+    /* padding: 20px; */
+
+}
+fieldset {
+    width: 500px;
+    margin: 0px auto;
+    background-color: rgba(206, 84, 84, 0.815);
+}
+#form {
+    text-align: center;
+    display: inline-block;
+}
+#top{
+    margin-left:50px;
+}

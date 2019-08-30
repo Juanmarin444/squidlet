@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/style.css"/>
+        <title>Squid</title>
+    </head>
+    <body>
+        <div id='wrapper'>
+            <div id='top'>
+                <h1>Help the squidlet become a squid.</h1>
+                Your Gear:<p>{{session['helmet']}}</p>
+                        <p>{{session['gloves']}}</p>
+                        <p>{{session['boots']}}</p>
+                        <p>{{session['jacket']}}</p>
+                        <p>{{session['jeans']}}</p>
+                Your Money:<p>${{session['money']}}</p>
+                Your Motorcycle:<p>{{session['mowty']}}</p>
+            </div>    
+            <fieldset>
+                <div id='form'>
+                    <h3>Farm</h3>
+                    <form action='/proccess_item' method='post'>
+                        <input type='hidden' name='building' value='helmet'/>
+                        <input type='submit' value='Find Gear!'/>
+                    </form>
+                </div>
+                <div id='form'>    
+                    <h3>Closet</h3>
+                    <form action='/proccess_item' method='post'>
+                        <input type='hidden' name='building' value='gloves'/>
+                        <input type='submit' value='Find Gear!'/>
+                    </form>
+                </div>
+                <div id='form'>
+                    <h3>Cave</h3>
+                    <form action='/proccess_item' method='post'>
+                        <input type='hidden' name='building' value='boots'/>
+                        <input type='submit' value='Find Gear!'/>
+                    </form>
+                </div>
+                <div id='form'>
+                    <h3>House</h3>
+                    <form action='proccess_item' method='post'>
+                        <input type='hidden' name='building' value='jacket'/>
+                        <input type='submit' value='Find Gear!'/>
+                    </form>
+                </div>
+                <div id='form'>    
+                    <h3>Garage</h3>
+                    <form action='proccess_item' method='post'>
+                        <input type='hidden' name='building' value='jeans'/>
+                        <input type='submit' value='Find Gear!'/>
+                    </form>
+                </div>
+                <div id='form'>
+                    <h3>Bank</h3>
+                    <form action='proccess_item' method='post'>
+                        <input type='hidden' name='building' value='money'/>
+                        <input type='submit' value='Withdraw'/> 
+                    </form>
+                </div>
+                <div id='form'>
+                    <h3>Casino</h3>
+                    <form action='proccess_item' method='post'>
+                        <input type='hidden' name='building' value='bet'/>
+                        <input type='submit' value='Bet!'/>
+                    </form>
+                </div>
+                <div id='form'>    
+                    <h3>Dealer</h3>
+                    <form action='proccess_item' method='post'>
+                        <input type='hidden' name='building' value='mowty'/>
+                        <input type='submit' value='BUY!'/>
+                    </form>
+                </div>    
+            </fieldset>
+            activity log:
+            <p>{{session['activity1']}}</p>
+            <p>{{session['activity2']}}</p>
+            <p>{{session['activity3']}}</p>
+        </div>    
+    </body>
+</html>
